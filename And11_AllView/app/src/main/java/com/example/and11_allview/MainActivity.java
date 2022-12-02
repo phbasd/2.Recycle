@@ -14,7 +14,7 @@ import com.example.and11_allview.myrecycler.MyRecyclerFragment;
 import com.example.and11_allview.recycler.RecyclerFragment;
 
 public class MainActivity extends AppCompatActivity {
-    Button btn_sub, btn_listF, btn_grid, btn_recycler, btn_recycler_my;
+    Button btn_sub, btn_listF, btn_grid, btn_recycler, btn_recycler_my, btn_human;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         btn_grid = findViewById(R.id.btn_grid);
         btn_recycler = findViewById(R.id.btn_recycler);
         btn_recycler_my = findViewById(R.id.btn_recycler_my);
+        btn_human = findViewById(R.id.btn_human);
 
         btn_sub.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +62,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btn_recycler_my.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, new MyRecyclerFragment()).commit();
+            }
+        });
+
+        btn_human.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, new MyRecyclerFragment()).commit();
