@@ -1,5 +1,6 @@
 package com.example.and11_allview.human;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.and11_allview.DetailActivity;
+import com.example.and11_allview.MainActivity;
 import com.example.and11_allview.R;
 
 //2.
@@ -34,6 +37,13 @@ public class HumanAdapter extends RecyclerView.Adapter<HumanAdapter.HumanViewHol
         h.human_title.setText("사과");
         h.human_txt.setText("맛있는 밀양 얼음골 사과 팝니다.");
         h.human_price.setText("50,000원");
+        h.human_img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), DetailActivity.class);
+                v.getContext().startActivity(intent);
+            }
+        });
     }
 
     //4.
