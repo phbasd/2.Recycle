@@ -11,7 +11,8 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        >
         <Button
             android:text="액티비티리스트뷰 사용"
             android:id="@+id/btn_sub"
@@ -28,6 +29,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
     <Button
         android:backgroundTint="#123"
         android:text="리사이클러뷰"
@@ -38,6 +44,13 @@
         android:backgroundTint="#123"
         android:text="리사이클러뷰 직접구현"
         android:id="@+id/btn_recycler_my"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <Button
+        android:backgroundTint="#123"
+        android:text="Human"
+        android:id="@+id/btn_human"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <FrameLayout

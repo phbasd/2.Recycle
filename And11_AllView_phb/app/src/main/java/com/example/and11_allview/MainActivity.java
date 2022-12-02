@@ -9,12 +9,13 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.and11_allview.gridv.GridFragment;
+import com.example.and11_allview.haman.HumanFragment;
 import com.example.and11_allview.listfrag.ListFragment;
 import com.example.and11_allview.recycler.RecyclerFragment;
 import com.example.and11_allview.recycler_my.MyRecyclerFragment;
 
 public class MainActivity extends AppCompatActivity {
-    Button btn_sub , btn_list , btn_grid , btn_recycler, btn_recycler_my ;
+    Button btn_sub , btn_list , btn_grid , btn_recycler, btn_recycler_my, btn_human ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         btn_grid = findViewById(R.id.btn_grid);
         btn_recycler = findViewById(R.id.btn_recycler);
         btn_recycler_my = findViewById(R.id.btn_recycler_my);
+        btn_human = findViewById(R.id.btn_human);
 
         btn_sub.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +63,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, new MyRecyclerFragment()).commit();
+            }
+        });
+
+        btn_human.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, new HumanFragment()).commit();
             }
         });
 
