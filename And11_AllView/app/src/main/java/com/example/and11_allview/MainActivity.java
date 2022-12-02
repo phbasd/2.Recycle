@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.and11_allview.gridv.GridFragment;
+import com.example.and11_allview.human.HumanFragment;
 import com.example.and11_allview.listfrag.ListFragment;
 import com.example.and11_allview.myrecycler.MyRecyclerFragment;
 import com.example.and11_allview.recycler.RecyclerFragment;
@@ -71,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         btn_human.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.container, new MyRecyclerFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, new HumanFragment()).commit();
             }
         });
     }
